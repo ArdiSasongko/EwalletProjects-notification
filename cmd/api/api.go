@@ -18,6 +18,7 @@ type Config struct {
 	logger   *logrus.Logger
 	db       DBConfig
 	auth     AuthConfig
+	email    EmailConfig
 }
 
 type DBConfig struct {
@@ -31,6 +32,11 @@ type AuthConfig struct {
 	secret string
 	iss    string
 	aud    string
+}
+
+type EmailConfig struct {
+	fromEmail string
+	apiKey    string
 }
 
 func (app *application) mount() *fiber.App {
