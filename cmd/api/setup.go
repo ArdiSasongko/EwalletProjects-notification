@@ -34,6 +34,10 @@ func LoadConfig() (Config, error) {
 			iss:    env.GetEnvString("JWT_ISS", ""),
 			aud:    env.GetEnvString("JWT_AUD", ""),
 		},
+		email: EmailConfig{
+			fromEmail: env.GetEnvString("EMAIL_FROM", ""),
+			apiKey:    env.GetEnvString("EMAIL_API", ""),
+		},
 	}
 
 	return cfg, nil

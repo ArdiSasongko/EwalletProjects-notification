@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS notification_template (
+    id SERIAL PRIMARY KEY,
+    template_name VARCHAR(255) NOT NULL UNIQUE,
+    subject VARCHAR(255) NOT NULL,
+    body TEXT NOT NULL,
+    created_at TIMESTAMP(0) DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP(0) DEFAULT CURRENT_TIMESTAMP
+);
